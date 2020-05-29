@@ -9,6 +9,9 @@ sudo apt install -y libx11-dev git bison flex automake libtool libxext-dev \
     libncurses-dev python3-dev xfonts-100dpi cython3 libopenmpi-dev \
     python3-scipy make zlib1g-dev
 
+rm -rf nrn
+rm -rf iv
+
 # "Download the code"
 git clone https://github.com/neuronsimulator/nrn
 git clone https://github.com/neuronsimulator/iv
