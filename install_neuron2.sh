@@ -40,6 +40,12 @@ cd nrn
 
 # Other configuration options here:
 # https://www.neuron.yale.edu/neuron/static/download/xconfopt.html
+# TODO can't find what --with-paranrn does in the doc above. doc output date i
+# guess?
+# TODO figure out if there are other defaults i want to turn on
+# (though at least the linked doc above seems to be out of date, so not sure
+# what all is necessary... is mpi enabled by default? docs say it isn't, but
+# instructions install them above without adding the flag here...)
 ./configure --with-iv --with-paranrn --with-nrnpython=python3
 make -j
 sudo make install -j
@@ -48,7 +54,7 @@ sudo python3 setup.py install
 
 # "Add NEURON to your PATH"
 # (I edited the line below to actually append to ~/.bashrc)
-echo "export PATH=$PATH:/usr/local/nrn/x86_64/bin" >> ~/.bashrc
+echo "export PATH=\"\$PATH:/usr/local/nrn/x86_64/bin\" >> ~/.bashrc
 
 # "Test NEURON"
 # (edited to not require interaction)
